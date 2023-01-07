@@ -4,6 +4,9 @@ local ESX = exports.es_extended:getSharedObject()
 ESX.RegisterServerCallback("ricky:pauseMenu:info", function(source,cb)
   local xPlayer = ESX.GetPlayerFromId(source)
   local xPlayers = ESX.GetPlayers()
+  if xPlayer == nil then 
+    return 
+  end
   local info = {
     ping = GetPlayerPing(xPlayer.source),
     playerOn = #xPlayers
