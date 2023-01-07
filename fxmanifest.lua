@@ -13,10 +13,8 @@ client_scripts {
 
 shared_scripts {
     'config.lua',
-    '@ox_lib/init.lua'
 }
 server_scripts {
-   '@mysql-async/lib/MySQL.lua',
     'server.lua'
 }
 
