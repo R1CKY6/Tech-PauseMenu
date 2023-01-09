@@ -1,6 +1,9 @@
 local ESX = exports.es_extended:getSharedObject()
 
 RegisterCommand('-+pausemenu', function(source, args, rawCommand)
+     if IsPauseMenuActive() == true then 
+            return 
+     end
     PauseMenu(true)
 end)
 
